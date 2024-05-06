@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benefits of Plants</title>
+    <link rel="stylesheet" href="css/styile.css">
+    <style>
+      body {
+        background: #d4e9d4;
+        margin: 0;
+      }
+      .f1 {
+        text-align: center;
+        background-image: url("./images/parsely2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+        border-radius: 30px
+        
+      }
+
+      ol {  
+  font-family: system-ui, sans-serif;
+  color: hsl(0 0% 95%);
+  
+  width: fit-content;
+  max-width: 30rem;
+  margin-block: 0;
+  margin-inline: auto;
+  padding-block: 2rem;
+  padding-inline: 0;
+  
+  display: grid;
+  gap: 3rem;
+  
+  list-style: none;
+  counter-reset: liCount;
+
+  > li {
+    --border-radius: 1rem;
+    --padding: 0.5rem;
+    --number-size: 3rem;
+    --indent: 3.5rem;
+    
+    display: grid;
+    --text-column: minmax(calc(var(--number-size) * 2), 1fr);
+    grid-template-columns: var(--number-size) var(--text-column);
+    gap: 0.5rem;
+    grid-auto-flow: dense;
+    align-items: center;
+    box-shadow: 2px 2px 5px hsl(0 0% 0% / .5);
+    
+    margin-inline: var(--indent) 0rem;
+    padding-block: var(--padding);
+    padding-inline: var(--padding) calc(var(--padding) * 2);
+    border-radius: var(--border-radius);
+    background-color: var(--accent-color);
+    counter-increment: liCount;
+
+    &::before, &::after { 
+      content: "";
+      grid-area: 1/1;
+      background-color: var(--accent-color);
+      background-image: linear-gradient(hsl(0 0% 100% / .8) 0 0);
+    }
+    &::before {
+      content: counter(liCount, decimal-leading-zero);
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      aspect-ratio: 1;
+      border-radius: calc(var(--border-radius) - var(--padding));
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 2px hsl(0 0% 0% / .75);
+    }
+    &::after{
+      --scale: 2;
+      aspect-ratio: 1/1;
+      border-radius: calc(var(--border-radius) / var(--scale));
+      scale: var(--scale);
+      rotate: 45deg;
+      z-index: -1;
+      box-shadow:
+        calc(var(--multi, 1) * -1px) calc(var(--multi, 1) * 1px) 5px hsl(0 0% 0% / .5),
+        calc(var(--multi, 1) * -.5rem) calc(var(--multi, 1) * .5rem) 0 0 var(--accent-color);
+      
+    }
+    &:nth-child(even){
+      --multi: -1;
+      margin-inline: 0rem var(--indent);
+      padding-inline:  calc(var(--padding) * 2) var(--padding);
+      grid-template-columns: var(--text-column) var(--number-size);
+      &::before, &::after { grid-area: 1/2 }
+    }
+  }
+}
+.bg {
+        /* The image used */
+        background-image: url("./images/background_login.jpg");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+html { color-scheme: dark}
+body {  font-family: system-ui, sans-serif }
+h1 { text-align: center }
+    </style>
+  </head>
+  <body  class="bg">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="cate.html">Varieties</a></li>
+      <li><a href="Video.html">Video</a></li>
+      <li><a class="active" href="benefits.html">Benefits of plants</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Contact.html">Contact us</a></li>
+    </ul>
+    <div class="f1">
+        <div style="height: 100px;">
+
+        </div>
+      <span
+        style="
+      
+        margin: auto;
+          font-size: 40px;
+          font-weight: bolder;
+          font-family: cursive;
+
+        
+        "
+      >
+        Benefits of Plants
+      </span>
+    </div>
+   
+<ol>
+    <li style="--accent-color: #36b9ea">The ultimate benefit of plants is the air we breathe.</li>
+    <li style="--accent-color: #3ecbb1">Plants also provide other ecosystem services, like cleaning outdoor and indoor air. </li>
+    <li style="--accent-color: #fcc003">Plants also have other positive impacts on our health. </li>
+    <li style="--accent-color: #fb337b">Plants can also help reduce crime.</li>
+    <li style="--accent-color: #9c54e5">Another ecosystem service plants provide is their ability to clean up contaminated soils.</li>
+  </ol>
+  </body>
+</html>

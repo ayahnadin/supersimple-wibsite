@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <link rel="stylesheet" href="css/styile.css">
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
+
+  </head>
+  <body>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a  href="cate.html">Varieties</a></li>
+      <li><a href="Video.html">Video</a></li>
+      <li><a href="benefits.html">Benefits of plants</a></li>
+      <li><a class="active" href="Team.html">Team</a></li>
+      <li><a href="Contact.html">Contact us</a></li>
+    </ul>
+
+      
+      <div class="container-block container">
+        <p class="text-blk team-head-text">
+         Team
+        </p>
+        <div class="responsive-container-block teamcard-container">
+          <div id="student_list" >
+
+          </div>
+         
+        </div>
+      </div>
+  </body><script>
+    function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+    var data = [
+    `
+    <div class="team-card">
+              <div class="team-img-wrapper">
+                <img class="team-img" src="./images/130-1306393_me-icon-png-transparent-png-download.png">
+              </div>
+              <div class="team-card-content">
+                <p class="text-blk name">
+                  Sally Ahmed Ali
+                </p>
+                <p class="text-blk position">
+                  422010932
+                </p>
+              </div>
+            </div>
+    `,
+    `
+    <div class="team-card">
+              <div class="team-img-wrapper">
+                <img class="team-img" src="./images/130-1306393_me-icon-png-transparent-png-download.png">
+              </div>
+              <div class="team-card-content">
+                <p class="text-blk name">
+                  Ghadeer Muhammed Al-Atwi
+                </p>
+                <p class="text-blk position">
+                 431007695
+                </p>
+              </div>
+            </div>
+    `,
+    `
+    <div class="team-card">
+              <div class="team-img-wrapper">
+                <img class="team-img" src="./images/130-1306393_me-icon-png-transparent-png-download.png">
+              </div>
+              <div class="team-card-content">
+                <p class="text-blk name">
+                  Ghada Saad Al-Anazi
+                </p>
+                <p class="text-blk position">
+                  431001142
+                </p>
+              </div>
+            </div>
+    `,
+    `   <div class="team-card">
+              <div class="team-img-wrapper">
+                <img class="team-img" src="./images/130-1306393_me-icon-png-transparent-png-download.png">
+              </div>
+              <div class="team-card-content">
+                <p class="text-blk name">
+                  Mawada Nashmi Al-Rashidi
+                </p>
+                <p class="text-blk position">
+                  431000711
+                </p>
+              </div>
+            </div>
+    `
+    ];
+    shuffle(data)
+    var list = document.getElementById('student_list');
+
+    for (let index = 0; index <  data.length; index++) {
+      const element = data[index];
+      list.innerHTML += element
+    }
+   
+
+// for (var i = 0; i < list.length; i++) {
+//   // var element = document.createElement("div");
+//   var el = list[i].lastChild;
+//   console.log( (el.textContent || el.innerText) );
+// }
+  </script>
+</html>    
+
